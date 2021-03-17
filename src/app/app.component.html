@@ -360,7 +360,9 @@
 </div>
 
 <div class="content" role="main">
-  <app-user>{{ title }}</app-user>
+  <app-user [name]="rootName" (nameChanged)="onNameChanged($event)">{{
+    title
+  }}</app-user>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
