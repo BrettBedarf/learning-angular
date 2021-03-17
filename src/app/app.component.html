@@ -363,6 +363,10 @@
   <app-user [name]="rootName" (nameChanged)="onNameChanged($event)">{{
     title
   }}</app-user>
+  <app-cart
+    [items]="rootItems"
+    (cartChanged)="onCartChanged($event)"
+  ></app-cart>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
