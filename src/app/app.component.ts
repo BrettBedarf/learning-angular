@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { random } from 'lodash';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ export class AppComponent {
     console.log(this.rootItems);
   }
   onIncreaseClick() {
-    this.number++;
+    // this.number++;
+    this.number = random(1, 10);
   }
 }
