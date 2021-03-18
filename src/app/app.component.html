@@ -363,12 +363,17 @@
   <app-user [name]="rootName" (nameChanged)="onNameChanged($event)">{{
     title
   }}</app-user>
-  <!-- <app-cart
-    [items]="rootItems"
-    (cartChanged)="onCartChanged($event)"
-  ></app-cart> -->
+
   <span>{{ number }}</span>
   <button (click)="onIncreaseClick()" class="btn btn-primary">Random</button>
+  <hr />
+  <div class="directives">
+    <p>Directives:</p>
+    <app-cart
+      [items]="rootItems"
+      (cartChanged)="onCartChanged($event)"
+    ></app-cart>
+  </div>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

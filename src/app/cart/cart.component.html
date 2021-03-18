@@ -1,2 +1,23 @@
 <input [(ngModel)]="addItemInput" type="text" />
-<button (click)="onAddToCart()">Add to Cart</button>
+<button
+  class="btn"
+  [ngClass]="{
+    'btn-primary': addItemInput !== '',
+    'btn-default': addItemInput === ''
+  }"
+  (click)="onAddToCart()"
+>
+  Add to Cart
+</button>
+
+<hr />
+
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let item of items; let i = index"
+    [ngStyle]="{ backgroundColor: i % 2 === 0 ? 'IndianRed' : 'DodgerBlue' }"
+  >
+    {{ item }}
+  </li>
+</ul>
