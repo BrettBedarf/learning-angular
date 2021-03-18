@@ -363,10 +363,13 @@
   <app-user [name]="rootName" (nameChanged)="onNameChanged($event)">{{
     title
   }}</app-user>
-  <app-cart
+  <!-- <app-cart
     [items]="rootItems"
     (cartChanged)="onCartChanged($event)"
-  ></app-cart>
+  ></app-cart> -->
+  <span >{{ number }}</span>
+  <button (click)="onIncreaseClick()" class="btn btn-primary">Increase</button>
+
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
